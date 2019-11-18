@@ -43,13 +43,21 @@ export class AppComponent {
         });
         await comp1.present();
       }
-
       if(modalToOpen === 'comp-2') {
         const comp2 = await this.modalCtrl.create({
           component: Component2Component,
         });
 
         await comp2.present();
+      }
+
+      if(modalToOpen === 'close') {
+        this.modalCtrl.getTop().then(
+          async (value: HTMLIonModalElement): Promise<void> => {
+            if (!!value) {
+              await this.modalCtrl.dismiss();
+            }
+        });
       }
     })
   }
