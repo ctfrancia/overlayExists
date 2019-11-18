@@ -12,7 +12,6 @@ export class ModalServiceService {
   constructor() { }
 
   public openComponent1(): void {
-    console.log('here in comp1')
     this.close();
     this.openModalSubject.next('comp-1');
   }

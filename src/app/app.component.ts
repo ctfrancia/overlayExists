@@ -37,7 +37,6 @@ export class AppComponent {
   private sub(): void {
     this.modalService.openModal$.subscribe(
       async (modalToOpen: string): Promise<void> => {
-        console.log('modalToOpen', modalToOpen);
       if (modalToOpen === 'comp-1') {
         const comp1 = await this.modalCtrl.create({
           component: Component1Component,

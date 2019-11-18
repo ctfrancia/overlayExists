@@ -11,7 +11,6 @@ export class HomePage {
   constructor(private modalService: ModalServiceService) {}
 
   private openComponent1(): void {
-    console.log('clicked');
     this.modalService.openComponent1();
   }
 
