@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ModalServiceService } from '../modal-service.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private modalService: ModalServiceService) {}
+
+  private openComponent1(): void {
+    console.log('clicked');
+    this.modalService.openComponent1();
+  }
 
 }
